@@ -96,7 +96,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="138" />
     <option name="y" value="48" />
     <option name="width" value="2100" />
@@ -119,11 +119,6 @@
               <item name="tripler-react-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="tripler-react-app" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tripler-react-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tripler-react-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -166,7 +161,7 @@
       <option name="presentableId" value="Default" />
       <updated>1549664290406</updated>
       <workItem from="1549664293616" duration="3695000" />
-      <workItem from="1549668271131" duration="3118000" />
+      <workItem from="1549668271131" duration="3432000" />
     </task>
     <task id="LOCAL-00001" summary="ported results.js code from CodePen">
       <created>1549666024624</created>
@@ -193,17 +188,16 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6813000" />
+    <option name="totallyTimeSpent" value="7127000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1721" height="935" extended-state="7" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1721" height="935" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20190024" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20190024" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.32876712" />
+      <window_info anchor="bottom" id="Messages" visible="true" weight="0.32876712" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
