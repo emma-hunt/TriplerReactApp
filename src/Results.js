@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import App from "./App";
+import './Results.scss';
 
 let city = "";
 
@@ -324,4 +324,8 @@ class Banner extends React.Component {
     }
 }
 
-export default Results;
+export {
+    Filters,
+    Results,
+    Banner,
+}
