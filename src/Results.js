@@ -143,6 +143,8 @@ let itineraries = [
     },
 ];
 
+let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
 //kids, active, indoor, outdoor
 let filtersChecked = [false, false, false, false];
 
@@ -201,8 +203,8 @@ class Filters extends React.Component{
                 <button id="mostReviewedSort" onClick={this.sortMostReviewed}>{this.state.mostReviewed}</button>
                 <button id="mostRecentSort" onClick={this.sortMostRecent}>{this.state.mostRecent}</button>
                 <h3>Filter</h3>
-                <button id="kidFilter" onClick={this.filterKid}>{this.state.kids}</button>
-                <button id="activeFilter" onClick={this.filterActive}>{this.state.active}</button>
+                <input name="kidBox" type="checkbox" checked="false" id="kidFilter" onClick={this.filterKid}>{this.state.kids}</input>
+                <checkbox id="activeFilter" onClick={this.filterActive}>{this.state.active}</checkbox>
                 <button id="outdoorFilter" onClick={this.filterOutdoor}>{this.state.outdoor}</button>
                 <button id="indoorFilter" onClick={this.filterIndoor}>{this.state.indoor}</button>
             </div>
@@ -252,18 +254,24 @@ class Results extends React.Component {
                                 <div id="resultCard">
                                     <li id="listItem">
                                         <p id="resultTitle">{l.name}</p>
-                                        <p id="resultCity">{l.city}</p>
-                                        <p>{l.date.toDateString()}</p>
+                                        <p id="resultCity">A day in {l.city}</p>
+                                        <p id="date">Posted {months[l.date.getUTCMonth()]}, {l.date.getFullYear()}</p>
                                         <p>{l.rating}/5 {l.num_reviews} Reviews</p>
                                         <p>Tags: {l.tags.join(", ")}</p>
-                                        <ul id="eventlist">
-                                            <li>{l.breakfast}</li>
-                                            <li>{l.morning_activity}</li>
-                                            <li>{l.lunch}</li>
-                                            <li>{l.afternoon_activity}</li>
-                                            <li>{l.dinner}</li>
-                                            <li>{l.evening_activity}</li>
-                                        </ul>
+                                        <p>Food:
+                                            <ul id="foodlist">
+                                                <li>{l.breakfast}</li>
+                                                <li>{l.lunch}</li>
+                                                <li>{l.dinner}</li>
+                                            </ul>
+                                        </p>
+                                        <p>Activities:
+                                            <ul id="eventlist">
+                                                <li>{l.morning_activity}</li>
+                                                <li>{l.afternoon_activity}</li>
+                                                <li>{l.evening_activity}</li>
+                                            </ul>
+                                        </p>
                                     </li>
                                 </div>
                             );
@@ -299,10 +307,10 @@ class Banner extends React.Component {
         } = this.state;
 
         return (
-            <div id="banner">
+            <div id="banner" >
                 <div id='logo'>
                     <h1>Tripler</h1>
-                    <p>choose your next adventure</p>
+                    <p>find tomorrow's adventure</p>
                 </div>
                 <div id="searchContainer">
                     <input
