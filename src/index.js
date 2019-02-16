@@ -1,16 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-//import App from './App';
-import {Results, Filters, Banner} from './Results';
+import { HomeSearchPage, ResultsPage, ItineraryPage } from './TriplerApp';
 import * as serviceWorker from './serviceWorker';
+import './TriplerApp.scss';
+import { Route, BrowserRouter } from "react-router-dom";
 
-// ReactDOM.render(<App />, document.getElementById('root'));
-ReactDOM.render(<Banner />, document.getElementById("banner"));
-ReactDOM.render(<Filters />, document.getElementById("filters"));
-ReactDOM.render(<Results />, document.getElementById("results"));
+ReactDOM.render(
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <div>
+            <Route exact path='/' component={ HomeSearchPage }/>
+            <Route exact path='/results' component={ ResultsPage }/>
+            <Route path='/itinerary' component={ ItineraryPage }/>
+        </div>
+    </BrowserRouter>, document.getElementById("container")
+)
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
 serviceWorker.unregister();
