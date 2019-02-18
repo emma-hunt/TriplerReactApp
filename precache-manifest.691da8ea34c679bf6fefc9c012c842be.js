@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/tripler-react-app/static/js/runtime~main.185d71fc.js"
   },
   {
-    "revision": "081aca4b0c12ea242650",
-    "url": "/tripler-react-app/static/js/main.081aca4b.chunk.js"
+    "revision": "0c9faa15ac7ce21c87b5",
+    "url": "/tripler-react-app/static/js/main.0c9faa15.chunk.js"
   },
   {
     "revision": "23ffbcd015e55ff4baf1",
     "url": "/tripler-react-app/static/js/2.23ffbcd0.chunk.js"
   },
   {
-    "revision": "081aca4b0c12ea242650",
+    "revision": "0c9faa15ac7ce21c87b5",
     "url": "/tripler-react-app/static/css/main.8e0801e8.chunk.css"
   },
   {
-    "revision": "c9d04a2423c9c55842e4fb2b0c875c19",
+    "revision": "013e9e0e5a3e6ac1783ba981978d805d",
     "url": "/tripler-react-app/index.html"
   }
 ];
