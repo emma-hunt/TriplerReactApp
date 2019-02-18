@@ -5,6 +5,7 @@
   "homepage": "http://emma-hunt.github.io/tripler-react-app",
   "dependencies": {
     "node-sass": "^4.11.0",
+    "package.json": "^2.0.1",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-native-gesture-handler": "^1.0.15",

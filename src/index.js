@@ -10,8 +10,8 @@ ReactDOM.render(
     <BrowserRouter basename={process.env.PUBLIC_URL}>
         <div>
             <Route exact path='/' component={ HomeSearchPage }/>
-            <Route path='/results' component={ ResultsPage }/>
-            <Route path='/itinerary' component={ ItineraryPage }/>
+            <Route path='/tripler-react-app/results' component={ ResultsPage }/>
+            <Route path='/tripler-react-app/itinerary' component={ ItineraryPage }/>
         </div>
     </BrowserRouter>, document.getElementById("container")
 )
