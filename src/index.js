@@ -10,7 +10,7 @@ ReactDOM.render(
     <BrowserRouter basename={process.env.PUBLIC_URL}>
         <div>
             <Route exact path='/' component={ HomeSearchPage }/>
-            <Route exact path='/results' component={ ResultsPage }/>
+            <Route path='/results' component={ ResultsPage }/>
             <Route path='/itinerary' component={ ItineraryPage }/>
         </div>
     </BrowserRouter>, document.getElementById("container")
