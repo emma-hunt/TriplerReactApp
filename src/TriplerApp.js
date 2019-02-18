@@ -164,8 +164,7 @@ class HomeSearchPage extends React.Component {
 
     searchClicked() {
         city = this.state.searchString.trim().toLowerCase();
-        window.location.assign('/results/?' + city);
-        //ReactDOM.render(<Results />, document.getElementById("results"));
+        window.location.assign('/tripler-react-app/results/?' + city);
     }
 
     handleKeyPress = (e) => {
@@ -270,7 +269,7 @@ class ResultsPage extends React.Component {
     }
 
     itemClicked(name) {
-        window.location.assign('/itinerary/?' + name.replace(/\s/g, ''));
+        window.location.assign('/tripler-react-app/itinerary/?' + name.replace(/\s/g, ''));
     }
 
     getSearchCity() {
@@ -487,7 +486,7 @@ class Results extends React.Component {
     }
 
     itemClicked(name) {
-        window.location.assign('/itinerary/?' + name.replace(/\s/g, ''));
+        window.location.assign('/tripler-react-app/itinerary/?' + name.replace(/\s/g, ''));
     }
 
     render() {
