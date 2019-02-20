@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
+import { Link, Redirect } from 'react-router-dom';
 
 let city = '';
 
@@ -155,6 +156,7 @@ class HomeSearchPage extends React.Component {
         super(props);
         this.state = {
             searchString: '',
+            redirect: false,
         };
     }
 
@@ -163,17 +165,28 @@ class HomeSearchPage extends React.Component {
     }
 
     searchClicked() {
-        city = this.state.searchString.trim().toLowerCase();
-        window.location.assign('/tripler-react-app/results/?' + city);
+        this.setState({
+            redirect: true
+        });
     }
 
     handleKeyPress = (e) => {
         if (e.key === 'Enter') {
-            this.searchClicked();
+            this.setState({
+                redirect: true
+            });
         }
     }
 
     render() {
+        if (this.state.redirect) {
+            //this.setState({
+            //    redirect: false
+            //});
+            return(
+                <Redirect to={ '/results/?' + this.state.searchString.trim().toLowerCase() }/>
+            )
+        }
         return(
             <div id="homePageContainer">
                 <div id="homeBannerContainer">
@@ -196,8 +209,9 @@ class HomeSearchPage extends React.Component {
                         />
                         <button
                             type="button"
+                            onClick={this.searchClicked.bind(this)}
                             id="homeSearchButton"
-                            onClick={this.searchClicked.bind(this)}>
+                            >
                             Search
                         </button>
                     </div>
@@ -213,6 +227,8 @@ class ResultsPage extends React.Component {
         this.state = {
             searchString: '',
             itineraries: [],
+            redirect: false,
+            itemName: '',
         };
     }
 
@@ -269,7 +285,10 @@ class ResultsPage extends React.Component {
     }
 
     itemClicked(name) {
-        window.location.assign('/tripler-react-app/itinerary/?' + name.replace(/\s/g, ''));
+        this.setState({
+            itemName: name.replace(/\s/g, ''),
+            redirect: true,
+        });
     }
 
     getSearchCity() {
@@ -283,6 +302,14 @@ class ResultsPage extends React.Component {
     }
 
     render() {
+        if (this.state.redirect) {
+            //this.setState({
+            //    redirect: false
+            //});
+            return(
+                <Redirect to={ '/itinerary/?' + this.state.itemName.toLowerCase() }/>
+            )
+        }
         this.getSearchCity();
 
         this.itineraries = itineraries;
@@ -422,7 +449,7 @@ class ItineraryPage extends React.Component {
                 <br></br>
                 <div id="main">
                     {itineraries.map(i => {
-                        if (i.name.replace(/\s/g,'').includes(this.getItineraryName())) {
+                        if (i.name.replace(/\s/g,'').toLowerCase().includes(this.getItineraryName())) {
                             return(
                                 <div id="item">
                                     <p>{i.name}</p>
