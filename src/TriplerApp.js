@@ -441,7 +441,7 @@ class ResultsPage extends React.Component {
             <div id="resultsPageContainer">
                 <div id="homeBannerContainer">
                     <div id='logo' onClick={ () => this.logoClicked() }>
-                        <img id="logoImg" src="/resources/images/Logo.svg" alt="Tripler Logo"></img>
+                        <img id="logoImg" src="resources/images/Logo.svg" alt="Tripler Logo"></img>
                         <h1 id="title">Tripler</h1>
                         <p id="tagline">find tomorrow's adventure</p>
                     </div>
@@ -642,7 +642,7 @@ class ItineraryPage extends React.Component {
             <div id="itineraryPageContainer">
                 <div id="homeBannerContainer">
                     <div id='logo' onClick={ () => this.logoClicked() }>
-                        <img id="logoImg" src="/resources/images/Logo.svg" alt="Tripler Logo"></img>
+                        <img id="logoImg" src="resources/images/Logo.svg" alt="Tripler Logo"></img>
                         <h1 id="title">Tripler</h1>
                         <p id="tagline">find tomorrow's adventure</p>
                     </div>
@@ -673,7 +673,7 @@ class ItineraryPage extends React.Component {
                                         <p id="resultTitle">{i.name}</p>
                                         <img
                                             id="printImg"
-                                            src="/resources/images/print.png"
+                                            src="resources/images/print.png"
                                             alt="Print Button"
                                             onClick={ () => this.printPopup.show() }>
                                         </img>
@@ -686,7 +686,7 @@ class ItineraryPage extends React.Component {
                                         </SkyLight>
                                         <img
                                             id="emailImg"
-                                            src="/resources/images/email.png"
+                                            src="resources/images/email.png"
                                             alt="Email Button"
                                             onClick={ () => this.emailPopup.show() }>
                                         </img>
