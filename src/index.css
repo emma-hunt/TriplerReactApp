@@ -1,4 +1,4 @@
-body, html {
+html {
   background-image: url("resources/images/HomePage.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -8,6 +8,8 @@ body, html {
 
 #container {
   /*display: inline-block;*/
+  width: 100%;
+  margin-left: 0px;
   height: 100%;
 }
 
@@ -30,9 +32,35 @@ body, html {
 }
 
 #logoImg {
-  margin-top: 20px;
+  margin-top: 10px;
   float: left;
   height: 60px;
+}
+
+#emailImg {
+  float: right;
+  height: 30px;
+  padding-right: 20px;
+  margin-right: 10px;
+}
+
+#emailImg:hover {
+    cursor: pointer;
+}
+
+#printImg {
+  float: right;
+  height: 30px;
+  padding-right: 20px;
+  margin-right: 40px;
+}
+
+#printImg:hover {
+    cursor: pointer;
+}
+
+#itineraryTop {
+
 }
 
 #title {
@@ -41,12 +69,12 @@ body, html {
 
 #tagline {
   margin-left: 20px;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 #homeSearchContainer {
-  height:200px;
-  width: 600px;
+  height:220px;
+  width: 700px;
   background-color: rgba(255, 255, 255, 0.8);
   margin: 0 auto;
   margin-top: 100px;
@@ -59,18 +87,20 @@ body, html {
   sans-serif;
   text-align: center;
   padding-top: 30px;
+  padding-top: 50px;
 }
 
 #homeSearchBarContainer {
 
 }
 
+
 #homeSearchBar {
   width: 400px;
   margin: 10px auto;
   padding: 10px;
   text-align: left;
-  margin-left: 60px;
+  margin-left: 100px;
 }
 
 #homeSearchButton {
@@ -108,11 +138,14 @@ body, html {
 }
 
 #resultsMain {
-  height:100%;
+  height: auto;
+  min-height: 800px;
   width: 100%;
   background-color: rgba(255, 255, 255);
-  margin: 0 auto;
   margin-top: 0px;
+  position:absolute;
+  left:0;
+  right:0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
   "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
   sans-serif;
@@ -121,7 +154,7 @@ body, html {
 }
 
 #filter {
-  width: 10%;
+  width: 15%;
   column: 1;
   column-span: 1;
   column-count: 1;
@@ -145,7 +178,7 @@ body, html {
 }
 
 #listItem {
-  background-color: #f5f5f5;
+  background-color: #e8f2f4;
   padding-left: 25px;
   padding-right: 25px;
   padding-bottom: 25px;
@@ -155,19 +188,31 @@ body, html {
 }
 
 #listItem:hover {
-   background-color: #f5f5f5;
- }
+  background-color: #d6ecf0;
+  cursor: pointer;
+}
 
-a {
-  position: absolute;
-  left: 200px;
-  color: #777;
+#filterChild:hover {
+  cursor: pointer;
+}
+
+#filterChild {
+  padding-top: 10px;
+}
+
+#sortChild:hover {
+  cursor: pointer;
+}
+
+#logo:hover {
+  cursor: pointer;
 }
 
 #resultTitle {
   font-size: 24pt;
   margin-top: 15px;
   margin-bottom: -15px;
+  width: 70%;
 }
 
 #resultCity {
@@ -195,4 +240,116 @@ a {
 
 ul {
   list-style-type: none
+}
+
+#itineraryMain {
+  height: auto;
+  min-height: 800px;
+  width: 100%;
+  background-color: rgba(255, 255, 255);
+  margin-top: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
+  position:absolute;
+  left:0;
+  right:0;
+}
+
+#resultsDate {
+  float: right;
+  width: 30%;
+  text-align: right;
+}
+#topCard {
+  display: flex;
+}
+
+StarRating {
+  size: 20px;
+}
+
+#ratings {
+  display: flex;
+}
+
+#numReviews {
+  margin-top: 0px;
+  padding-left: 5px;
+}
+
+#itineraryItem {
+  padding: 20px;
+  margin-left: 80px;
+  margin-top: 40px;
+}
+
+Popup:hover {
+    cursor: pointer;
+}
+
+#activityTitle {
+  color: #4eaabc;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+#activityTitle:hover{
+  cursor: pointer;
+}
+
+#activityItem {
+  margin: 0px;
+  padding: 0px;
+}
+
+#activity {
+  padding-right: 200px;
+}
+
+#printPopup {
+  text-align: center;
+  padding-top: 160px;
+  font-size: 20px;
+}
+
+#skylight {
+  background-color: #d6ecf0;
+}
+
+#emailTextBar {
+  width: 400px;
+  margin: 10px auto;
+  padding: 10px;
+  text-align: left;
+}
+
+#emailContainer {
+  margin: auto;
+  width: 50%;
+}
+
+#emailPrompt {
+  text-align: center;
+  margin-top: 120px;
+}
+
+#emailButtonContainer {
+  margin: auto;
+  width: 50%;
+}
+
+#emailButton {
+  width: 50%;
+  margin: 10px auto;
+  margin-left: 50px;
+  padding: 10px;
+}
+
+#emailSentText {
+  text-align: center;
+  margin-top:190px;
+  font-size: 20px;
 }
