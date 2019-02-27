@@ -512,7 +512,7 @@ class ResultsPage extends React.Component {
                                                 <li id="listItem" onClick={() => this.itemClicked(l.name)}>
                                                     <div id="topCard">
                                                         <p id="resultTitle">{l.name}</p>
-                                                        <p id="resultsDate">{l.date.toDateString()}</p>
+                                                        <p id="resultsDate">Posted {l.date.toDateString()}</p>
                                                     </div>
                                                     <p id="resultCity">{l.city}</p>
                                                     <div id="ratings">
@@ -520,8 +520,9 @@ class ResultsPage extends React.Component {
                                                             name='rating'
                                                             value={l.rating}
                                                             starCount={5}
-                                                            starColor="#FFE699"
-                                                            starDimension="40px"
+                                                            starDimension='50px'
+                                                            starRatedColor="#FFD95F"
+                                                            starColor="#FFD95F"
                                                             emptyStarColor="grey"
                                                         />
                                                         <p id="numReviews">{l.num_reviews} Reviews</p>
@@ -719,14 +720,14 @@ class ItineraryPage extends React.Component {
                                         </SkyLight>
                                     </div>
                                     <p id="resultCity">{i.city}</p>
-                                    <p>{ i.date.toDateString() }</p>
+                                    <p>Posted { i.date.toDateString() }</p>
                                     <div id="ratings">
                                         <StarRatings
                                             name='rating'
                                             value={ i.rating }
                                             starCount={5}
-                                            starColor="#FFE699"
-                                            starDimension="40px"
+                                            starColor="#FFD95F"
+                                            starDimension="90px"
                                             emptyStarColor="grey"
                                         />
                                         <p id="numReviews">{ i.num_reviews } Reviews</p>
