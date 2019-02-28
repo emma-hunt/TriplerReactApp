@@ -1,14 +1,14 @@
 {
-  "main.css": "/tripler-react-app/static/css/main.6a6eab55.chunk.css",
-  "main.js": "/tripler-react-app/static/js/main.19052ae3.chunk.js",
-  "main.js.map": "/tripler-react-app/static/js/main.19052ae3.chunk.js.map",
+  "main.css": "/tripler-react-app/static/css/main.ba3cc901.chunk.css",
+  "main.js": "/tripler-react-app/static/js/main.811eca1d.chunk.js",
+  "main.js.map": "/tripler-react-app/static/js/main.811eca1d.chunk.js.map",
   "runtime~main.js": "/tripler-react-app/static/js/runtime~main.185d71fc.js",
   "runtime~main.js.map": "/tripler-react-app/static/js/runtime~main.185d71fc.js.map",
   "static/js/2.dd7e4c60.chunk.js": "/tripler-react-app/static/js/2.dd7e4c60.chunk.js",
   "static/js/2.dd7e4c60.chunk.js.map": "/tripler-react-app/static/js/2.dd7e4c60.chunk.js.map",
   "index.html": "/tripler-react-app/index.html",
-  "precache-manifest.d4be68cc61786900e9b4370956ba50fc.js": "/tripler-react-app/precache-manifest.d4be68cc61786900e9b4370956ba50fc.js",
+  "precache-manifest.8a018806447f24211c83f1eb735769a7.js": "/tripler-react-app/precache-manifest.8a018806447f24211c83f1eb735769a7.js",
   "service-worker.js": "/tripler-react-app/service-worker.js",
-  "static/css/main.6a6eab55.chunk.css.map": "/tripler-react-app/static/css/main.6a6eab55.chunk.css.map",
+  "static/css/main.ba3cc901.chunk.css.map": "/tripler-react-app/static/css/main.ba3cc901.chunk.css.map",
   "static/media/index.css": "/tripler-react-app/static/media/HomePage.e7ea73c0.jpg"
 }
