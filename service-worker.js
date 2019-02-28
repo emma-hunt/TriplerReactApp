@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/tripler-react-app/precache-manifest.b535e6943176753f2a8edc930bd882eb.js"
+  "/tripler-react-app/precache-manifest.d4be68cc61786900e9b4370956ba50fc.js"
 );
 
 workbox.clientsClaim();
