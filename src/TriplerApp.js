@@ -510,52 +510,58 @@ class ResultsPage extends React.Component {
                                         return (
                                             <div id="resultCard">
                                                 <li id="listItem" onClick={() => this.itemClicked(l.name)}>
-                                                    <div id="cardBody">
-                                                        <p id="resultTitle">{l.name}</p>
-                                                        <p id="resultCity">{l.city}</p>
-                                                        <div id="ratings">
-                                                            <StarRatings
-                                                                name='rating'
-                                                                value={l.rating}
-                                                                starCount={5}
-                                                                starDimension='50px'
-                                                                starRatedColor="#FFD95F"
-                                                                starColor="#FFD95F"
-                                                                emptyStarColor="grey"
-                                                            />
-                                                            <p id="numReviews">{l.num_reviews} Reviews</p>
+                                                    <div id="cardTop">
+                                                        <div id="rtc">
+                                                            <p id="resultTitle">{l.name}</p>
                                                         </div>
-                                                        <p>Tags: {l.tags.join(", ")}</p>
+                                                        <p id="itemDate">Posted {l.date.toDateString()}</p>
+
                                                     </div>
-                                                    <div id="eventListIcons">
-                                                        <div>
-                                                            <img id="mealImg" src="resources/images/meal.svg" alt="TriplerFood"></img>
-                                                            <p id="breakfast">{l.breakfast}</p>
+                                                    <div id="cardBottom">
+                                                        <div id="cardBody">
+                                                            <p id="resultCity">{l.city}</p>
+                                                            <div id="ratings">
+                                                                <StarRatings
+                                                                    name='rating'
+                                                                    value={l.rating}
+                                                                    starCount={5}
+                                                                    starDimension='50px'
+                                                                    starRatedColor="#FFD95F"
+                                                                    starColor="#FFD95F"
+                                                                    emptyStarColor="grey"
+                                                                />
+                                                                <p id="numReviews">{l.num_reviews} Reviews</p>
+                                                            </div>
+                                                            <p>Tags: {l.tags.join(", ")}</p>
                                                         </div>
-                                                        <div>
-                                                            <img id="activityImg" src="resources/images/activity.png" alt="TriplerAct"></img>
-                                                            <p>{l.morning_activity}</p>
-                                                        </div>
-                                                        <div>
-                                                            <img id="mealImg" src="resources/images/meal.svg" alt="TriplerFood"></img>
-                                                            <p>{l.lunch}</p>
-                                                        </div>
-                                                        <div>
-                                                            <img id="activityImg" src="resources/images/activity.png" alt="TriplerAct"></img>
-                                                            <p>{l.afternoon_activity}</p>
-                                                        </div>
-                                                        <div>
-                                                            <img id="mealImg" src="resources/images/meal.svg" alt="TriplerFood"></img>
-                                                            <p>{l.dinner}</p>
-                                                        </div>
-                                                        <div>
-                                                            <img id="activityImg" src="resources/images/activity.png" alt="TriplerAct"></img>
-                                                            <p>{l.evening_activity}</p>
+                                                        <div id="eventListIcons">
+                                                            <div>
+                                                                <img id="mealImg" src="resources/images/meal.svg" alt="TriplerFood"></img>
+                                                                <p id="breakfast">{l.breakfast}</p>
+                                                            </div>
+                                                            <div>
+                                                                <img id="activityImg" src="resources/images/activity.png" alt="TriplerAct"></img>
+                                                                <p>{l.morning_activity}</p>
+                                                            </div>
+                                                            <div>
+                                                                <img id="mealImg" src="resources/images/meal.svg" alt="TriplerFood"></img>
+                                                                <p>{l.lunch}</p>
+                                                            </div>
+                                                            <div>
+                                                                <img id="activityImg" src="resources/images/activity.png" alt="TriplerAct"></img>
+                                                                <p>{l.afternoon_activity}</p>
+                                                            </div>
+                                                            <div>
+                                                                <img id="mealImg" src="resources/images/meal.svg" alt="TriplerFood"></img>
+                                                                <p>{l.dinner}</p>
+                                                            </div>
+                                                            <div>
+                                                                <img id="activityImg" src="resources/images/activity.png" alt="TriplerAct"></img>
+                                                                <p>{l.evening_activity}</p>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div id="itemDate">
-                                                        <p>Posted {l.date.toDateString()}</p>
-                                                    </div>
+
                                                 </li>
                                             </div>
                                         );
@@ -864,38 +870,64 @@ class Results extends React.Component {
                     </ul>
                 </div>
                 <div>
-
                     <ul>
                         {this.itineraries.map(l => {
                             if(l.city.trim().toLowerCase().includes(city.trim().toLowerCase()) && this.filterFunction(l)) {
                                 return (
                                     <div id="resultCard">
                                         <li id="listItem" onClick={() => this.itemClicked(l.name)}>
-                                            <div id="topCard">
-                                                <p id="resultTitle">{l.name}</p>
-                                                <p id="resultsDate">{l.date.toDateString()}</p>
+                                            <div id="cardTop">
+                                                <div id="rtc">
+                                                    <p id="resultTitle">{l.name}</p>
+                                                </div>
+                                                <p id="itemDate">Posted {l.date.toDateString()}</p>
+
                                             </div>
-                                            <p id="resultCity">{l.city}</p>
-                                            <div id="ratings">
-                                                <StarRatings
-                                                    name='rating'
-                                                    value={l.rating}
-                                                    starCount={5}
-                                                    starColor="#FFE699"
-                                                    starDimension="40px"
-                                                    emptyStarColor="grey"
-                                                />
-                                                <p id="numReviews">{l.num_reviews} Reviews</p>
+                                            <div id="cardBottom">
+                                                <div id="cardBody">
+                                                    <p id="resultCity">{l.city}</p>
+                                                    <div id="ratings">
+                                                        <StarRatings
+                                                            name='rating'
+                                                            value={l.rating}
+                                                            starCount={5}
+                                                            starDimension='50px'
+                                                            starRatedColor="#FFD95F"
+                                                            starColor="#FFD95F"
+                                                            emptyStarColor="grey"
+                                                        />
+                                                        <p id="numReviews">{l.num_reviews} Reviews</p>
+                                                    </div>
+                                                    <p>Tags: {l.tags.join(", ")}</p>
+                                                </div>
+                                                <div id="eventListIcons">
+                                                    <div>
+                                                        <img id="mealImg" src="resources/images/meal.svg" alt="TriplerFood"></img>
+                                                        <p id="breakfast">{l.breakfast}</p>
+                                                    </div>
+                                                    <div>
+                                                        <img id="activityImg" src="resources/images/activity.png" alt="TriplerAct"></img>
+                                                        <p>{l.morning_activity}</p>
+                                                    </div>
+                                                    <div>
+                                                        <img id="mealImg" src="resources/images/meal.svg" alt="TriplerFood"></img>
+                                                        <p>{l.lunch}</p>
+                                                    </div>
+                                                    <div>
+                                                        <img id="activityImg" src="resources/images/activity.png" alt="TriplerAct"></img>
+                                                        <p>{l.afternoon_activity}</p>
+                                                    </div>
+                                                    <div>
+                                                        <img id="mealImg" src="resources/images/meal.svg" alt="TriplerFood"></img>
+                                                        <p>{l.dinner}</p>
+                                                    </div>
+                                                    <div>
+                                                        <img id="activityImg" src="resources/images/activity.png" alt="TriplerAct"></img>
+                                                        <p>{l.evening_activity}</p>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <p>Tags: {l.tags.join(", ")}</p>
-                                            <ul id="eventlist">
-                                                <li>{l.breakfast}</li>
-                                                <li>{l.morning_activity}</li>
-                                                <li>{l.lunch}</li>
-                                                <li>{l.afternoon_activity}</li>
-                                                <li>{l.dinner}</li>
-                                                <li>{l.evening_activity}</li>
-                                            </ul>
+
                                         </li>
                                     </div>
                                 );
