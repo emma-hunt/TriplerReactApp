@@ -37,6 +37,18 @@ html {
   height: 60px;
 }
 
+#activityImg {
+  float: left;
+  height: 20px;
+  padding: 5px;
+}
+
+#mealImg {
+  float: left;
+  height: 20px;
+  padding: 5px;
+}
+
 #emailImg {
   float: right;
   height: 30px;
@@ -171,8 +183,9 @@ html {
 
 #resultCard {
   list-style-type: none;
-  width: 95%;
+  width: 85%;
   margin: 0 auto;
+
   padding: 0;
   float: left;
 }
@@ -185,6 +198,7 @@ html {
   padding-top: 1px;
   margin-bottom: 10px;
   position: relative;
+  display: flex;
 }
 
 #listItem:hover {
@@ -261,6 +275,13 @@ ul {
   width: 30%;
   text-align: right;
 }
+
+#eventListIcons {
+  float: left;
+  text-align: left;
+  width: 33%;
+}
+
 #topCard {
   display: flex;
 }
@@ -352,4 +373,16 @@ Popup:hover {
   text-align: center;
   margin-top:190px;
   font-size: 20px;
+}
+
+#itemDate {
+  width: 33%;
+  float: right;
+  text-align: right;
+  margin-right: 0px;
+  padding-right: 0px;
+}
+
+#cardBody {
+  width: 33%;
 }

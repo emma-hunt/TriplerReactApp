@@ -510,32 +510,52 @@ class ResultsPage extends React.Component {
                                         return (
                                             <div id="resultCard">
                                                 <li id="listItem" onClick={() => this.itemClicked(l.name)}>
-                                                    <div id="topCard">
+                                                    <div id="cardBody">
                                                         <p id="resultTitle">{l.name}</p>
-                                                        <p id="resultsDate">Posted {l.date.toDateString()}</p>
+                                                        <p id="resultCity">{l.city}</p>
+                                                        <div id="ratings">
+                                                            <StarRatings
+                                                                name='rating'
+                                                                value={l.rating}
+                                                                starCount={5}
+                                                                starDimension='50px'
+                                                                starRatedColor="#FFD95F"
+                                                                starColor="#FFD95F"
+                                                                emptyStarColor="grey"
+                                                            />
+                                                            <p id="numReviews">{l.num_reviews} Reviews</p>
+                                                        </div>
+                                                        <p>Tags: {l.tags.join(", ")}</p>
                                                     </div>
-                                                    <p id="resultCity">{l.city}</p>
-                                                    <div id="ratings">
-                                                        <StarRatings
-                                                            name='rating'
-                                                            value={l.rating}
-                                                            starCount={5}
-                                                            starDimension='50px'
-                                                            starRatedColor="#FFD95F"
-                                                            starColor="#FFD95F"
-                                                            emptyStarColor="grey"
-                                                        />
-                                                        <p id="numReviews">{l.num_reviews} Reviews</p>
+                                                    <div id="eventListIcons">
+                                                        <div>
+                                                            <img id="mealImg" src="resources/images/meal.svg" alt="TriplerFood"></img>
+                                                            <p id="breakfast">{l.breakfast}</p>
+                                                        </div>
+                                                        <div>
+                                                            <img id="activityImg" src="resources/images/activity.png" alt="TriplerAct"></img>
+                                                            <p>{l.morning_activity}</p>
+                                                        </div>
+                                                        <div>
+                                                            <img id="mealImg" src="resources/images/meal.svg" alt="TriplerFood"></img>
+                                                            <p>{l.lunch}</p>
+                                                        </div>
+                                                        <div>
+                                                            <img id="activityImg" src="resources/images/activity.png" alt="TriplerAct"></img>
+                                                            <p>{l.afternoon_activity}</p>
+                                                        </div>
+                                                        <div>
+                                                            <img id="mealImg" src="resources/images/meal.svg" alt="TriplerFood"></img>
+                                                            <p>{l.dinner}</p>
+                                                        </div>
+                                                        <div>
+                                                            <img id="activityImg" src="resources/images/activity.png" alt="TriplerAct"></img>
+                                                            <p>{l.evening_activity}</p>
+                                                        </div>
                                                     </div>
-                                                    <p>Tags: {l.tags.join(", ")}</p>
-                                                    <ul id="eventlist">
-                                                        <li>{l.breakfast}</li>
-                                                        <li>{l.morning_activity}</li>
-                                                        <li>{l.lunch}</li>
-                                                        <li>{l.afternoon_activity}</li>
-                                                        <li>{l.dinner}</li>
-                                                        <li>{l.evening_activity}</li>
-                                                    </ul>
+                                                    <div id="itemDate">
+                                                        <p>Posted {l.date.toDateString()}</p>
+                                                    </div>
                                                 </li>
                                             </div>
                                         );
